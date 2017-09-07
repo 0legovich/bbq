@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.2.9'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+gem 'twitter-bootstrap-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
