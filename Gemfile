@@ -6,7 +6,7 @@ gem 'rails', '~> 4.2.9'
 
 gem 'devise'
 gem 'devise-i18n'
-gem 'russian'
+gem 'rails-i18n'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
