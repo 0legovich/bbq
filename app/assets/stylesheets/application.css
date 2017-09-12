@@ -60,3 +60,8 @@
 .thumbnail-inner {
   padding: 20px 4px 4px;
 }
+
+.devise-error-messages h2 {
+  
+  font-size: 14px;
+}

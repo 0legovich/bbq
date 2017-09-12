@@ -1,0 +1,19 @@
+ru:
+  activerecord:
+    models:
+      user: "Пользователь"
+      event: "Событие"
+    attributes:
+      user:
+        email: "Email"
+        name: "Имя"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+      event:
+        title: "Наименование"
+        adress: "Место проведения"
+        datetime: "Дата и время"
+        description: "Описание"
+  app:
+    name: "Шашлыки"
+    company: "Роман Олегович"
