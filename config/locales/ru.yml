@@ -14,12 +14,37 @@ ru:
         adress: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
-  app:
-    name: "Шашлыки"
-    company: "Роман Олегович"
+
   validate:
     error:
       one: "Форма содержит %{count} ошибку"
       few: "Форма содержит %{count} ошибки"
       many: "Форма содержит %{count} ошибок"
       other: "Форма содержит %{count} ошибок"
+
+  controllers:
+    events:
+      created: 'Вы создали новое мероприятие'
+      updated: 'Вы обновили мероприятие'
+      destroyed: 'Вы удалили мероприятие'
+    users:
+      updated: 'Вы обновили свой профиль'
+    comments:
+      destroyed: 'Вы удалили комментарий'
+      created: 'Вы успешно создали комментарий'
+      error: 'Ошибка с комментарием'
+    subscription:
+      error: 'Подписка/отписка не удалась'
+      destroyed: 'Вы отписались от данного события'
+      created: 'Вы подписались на данное событие'
+
+  comments:
+      comment:
+        destroy_confirm: 'Вы уверены, что хотите удалить комментарий?'
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите отписаться?'
+
+  app:
+      name: "Шашлыки"
+      company: "Роман Олегович"
