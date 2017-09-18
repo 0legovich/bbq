@@ -8,6 +8,10 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'rails-i18n'
 
+gem 'carrierwave'
+
+gem 'rmagick'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 

@@ -3,10 +3,15 @@ ru:
     models:
       user: "Пользователь"
       event: "Событие"
+      photo: "Фотография"
+      subscription: "Подписка"
+      comment: "Комментарий"
+
     attributes:
       user:
         email: "Email"
         name: "Имя"
+        avatar: "Аватар"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
       event:
@@ -14,6 +19,14 @@ ru:
         adress: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+      photo:
+        photo: "Фотография"
+      comment:
+        user_name: "Ваше имя"
+        body: "Комментарий"
+      subscription:
+        user_name: "Ваше имя"
+        user_email: "Ваш email"
 
     errors:
       models:
@@ -44,6 +57,10 @@ ru:
       error: 'Подписка/отписка не удалась'
       destroyed: 'Вы отписались от данного события'
       created: 'Вы подписались на данное событие'
+    photos:
+      error: 'Что-то не так с фоткой'
+      destroyed: 'Вы удалили фотографию'
+      created: 'Вы добавили фотографию к событию'
 
   comments:
       comment:
