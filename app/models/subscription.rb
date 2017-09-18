@@ -13,7 +13,7 @@ class Subscription < ActiveRecord::Base
 
   def check_email
     if !user.present? && !User.find_by_email(self.user_email).nil?
-      errors.add(:user_email, :invalid, message: 'уже используется другим пользователем')
+      errors.add(:user_email, :email_used)
       false
     end
   end

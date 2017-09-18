@@ -15,6 +15,13 @@ ru:
         datetime: "Дата и время"
         description: "Описание"
 
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              email_used: 'Данный email уже используется другим пользователем'
+
   validate:
     error:
       one: "Форма содержит %{count} ошибку"
@@ -37,7 +44,6 @@ ru:
       error: 'Подписка/отписка не удалась'
       destroyed: 'Вы отписались от данного события'
       created: 'Вы подписались на данное событие'
-      email_is_used: 'Данный email уже используется другим пользователем'
 
   comments:
       comment:
