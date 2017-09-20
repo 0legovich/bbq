@@ -10,6 +10,7 @@ class SubscriptionsController < ApplicationController
     if @new_subscription.user == @new_subscription.event.user
       redirect_to @event, notice: t('controllers.subscription.error')
     elsif @new_subscription.save
+      EventMailer.subscription(@event, @new_subscription).deliver_now
       redirect_to @event, notice: t('controllers.subscription.created')
     else
       render 'events/show', notice: t('controllers.subscription.error')

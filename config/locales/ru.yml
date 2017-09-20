@@ -69,6 +69,21 @@ ru:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите отписаться?'
 
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      event: 'Событие'
+      date: 'Состоится'
+      owner: 'Организатор'
+
   app:
       name: "Шашлыки"
       company: "Роман Олегович"
