@@ -1,0 +1,14 @@
+<h1><%= t '.title' %></h1>
+<div>
+  <%= image_tag(@photo) %>
+</div>
+
+<h3><%= t '.added' %>: <%= @author_photo %></h3>
+
+
+<h4><%= t '.event' %>: <%= @event.title %></h4>
+<h4><%= t '.datetime' %>: <%= @event.datetime %></h4>
+<h4><%= t '.owner' %>: <%= @event.user.name %></h4>
+
+
+<%= image_tag attachments['photo'] %>

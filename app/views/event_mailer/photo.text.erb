@@ -1,0 +1,12 @@
+<%= t '.title' %>
+----
+
+<%= event_url(@event) %>
+
+<%= t '.added' %>: <%= @author_photo %>
+--------------------------------------
+
+<%= t '.event' %>: <%= @event.title %>
+<%= t '.datetime' %>: <%= @event.datetime %>
+<%= t '.owner' %>: <%= @event.user.name %>
+

@@ -8,6 +8,7 @@ class PhotosController < ApplicationController
     @new_photo.user = current_user
 
     if @new_photo.save
+      EventMailer.photo(@new_photo, @event).deliver_now
       redirect_to @event, notice: t('controllers.photos.created')
     else
       render 'events/show', alert: t('controllers.photos.error')

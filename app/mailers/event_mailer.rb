@@ -1,3 +1,4 @@
+require 'net/http'
 class EventMailer < ApplicationMailer
 
   def subscription(event, subscription)
@@ -13,5 +14,20 @@ class EventMailer < ApplicationMailer
     @event = event
 
     mail to: email, subject: "Новый комментарий @ #{event.title}"
+  end
+
+  def photo(photo, event)
+    @event = event
+    @author_photo = photo.user.name
+    @photo = photo.photo.to_s
+
+    if File.exist?('public' + @photo)
+      @photo = 'public' + @photo
+      attachments['photo'] = File.read(@photo)
+    else
+      attachments['photo'] = Net::HTTP.get(URI(@photo))
+    end
+
+    mail to: event.user.email, subject: "Новая фотография #{event.title}"
   end
 end

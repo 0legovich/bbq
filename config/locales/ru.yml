@@ -81,8 +81,14 @@ ru:
       name: 'Имя'
       email: 'Email'
       event: 'Событие'
-      date: 'Состоится'
+      datetime: 'Состоится'
       owner: 'Организатор'
+    photo:
+      title: 'Новая фотография'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+      added: 'Добавил'
 
   app:
       name: "Шашлыки"
