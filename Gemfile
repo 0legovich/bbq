@@ -12,6 +12,7 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
+gem 'fog'
 gem 'fog-google'
 gem 'google-api-client', '~> 0.8.6'
 
