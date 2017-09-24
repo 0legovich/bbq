@@ -1,7 +1,10 @@
+require 'translit'
+
 class PhotosController < ApplicationController
 
   before_action :set_event, only: [:create, :destroy]
   before_action :set_user, only: [:destroy]
+  before_action :translit_file_name, only: [:create]
 
   def create
     @new_photo = @event.photos.build(photo_params)
@@ -38,5 +41,11 @@ class PhotosController < ApplicationController
 
   def photo_params
     params.fetch(:photo, {}).permit(:photo)
+  end
+
+  def translit_file_name
+    params[:photo][:photo].original_filename = Translit.convert(
+      params[:photo][:photo].original_filename, :english
+    )
   end
 end

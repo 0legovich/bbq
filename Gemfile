@@ -16,6 +16,8 @@ gem 'fog'
 gem 'fog-google'
 gem 'google-api-client', '~> 0.8.6'
 
+gem 'translit'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
