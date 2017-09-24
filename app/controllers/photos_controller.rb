@@ -11,7 +11,7 @@ class PhotosController < ApplicationController
     @new_photo.user = current_user
 
     if @new_photo.save
-      EventMailer.photo(@new_photo, @event).deliver_now
+      notify_subscribers(@event, @new_photo)
       redirect_to @event, notice: t('controllers.photos.created')
     else
       render 'events/show', alert: t('controllers.photos.error')
@@ -31,6 +31,14 @@ class PhotosController < ApplicationController
   end
 
   private
+  def notify_subscribers(event, photo)
+    event_emails = get_emails(event, photo)
+
+    event_emails.each do |email|
+      EventMailer.photo(event, photo, email).deliver_now
+    end
+  end
+
   def set_event
     @event = Event.find(params[:event_id])
   end

@@ -16,7 +16,7 @@ class EventMailer < ApplicationMailer
     mail to: email, subject: "Новый комментарий @ #{event.title}"
   end
 
-  def photo(photo, event)
+  def photo(event, photo, email)
     @event = event
     @author_photo = photo.user.name
     @photo = photo.photo.to_s
@@ -28,6 +28,6 @@ class EventMailer < ApplicationMailer
       attachments['photo'] = Net::HTTP.get(URI(@photo))
     end
 
-    mail to: event.user.email, subject: "Новая фотография #{event.title}"
+    mail to: email, subject: "Новая фотография #{event.title}"
   end
 end

@@ -18,4 +18,9 @@ class ApplicationController < ActionController::Base
       (model.user == current_user ||
         (model.try(:event).present? && model.event.user == current_user))
   end
+
+  def get_emails(event, model)
+    event_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
+    event_emails -= [model.user.email] if model.user
+  end
 end
