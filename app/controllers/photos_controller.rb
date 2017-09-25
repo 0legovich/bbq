@@ -4,9 +4,9 @@ class PhotosController < ApplicationController
 
   before_action :set_event, only: [:create, :destroy]
   before_action :set_user, only: [:destroy]
-  before_action :translit_file_name, only: [:create]
 
   def create
+    translit_file_name if params[:photo]
     @new_photo = @event.photos.build(photo_params)
     @new_photo.user = current_user
 
