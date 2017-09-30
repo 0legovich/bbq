@@ -1,7 +1,7 @@
 <h1><%= t '.title' %></h1>
 
 <div>
-<%= image_tag @photo %>
+  <%= link_to (image_tag @photo), event_url(@event) %>
 </div>
 
 <h3><%= t '.added' %>: <%= @author_photo %></h3>

@@ -19,7 +19,7 @@ class EventMailer < ApplicationMailer
   def photo(event, photo, email)
     @event = event
     @author_photo = photo.user.name
-    @photo = photo.photo.to_s
+    @photo = photo.photo.thumb.to_s
 
     #для отправки фотографии как вложение:
     # if File.exist?('public' + @photo)
