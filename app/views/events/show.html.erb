@@ -6,7 +6,7 @@
                       style: "background-image: url(#{event_photo(@event)})" %>
       <div class="event-info-inner event-header row">
         <div class="col-md-12">
-          <div class="event-description">
+          <div class="event-description buffer-top">
             <h1><%= @event.title %></h1>
             <h3><%= l(@event.datetime, format: :long) %></h3>
             <h3>

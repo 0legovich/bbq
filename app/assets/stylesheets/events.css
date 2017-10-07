@@ -27,6 +27,7 @@
 
 .event-description * {
   color: white;
+  text-overflow: ellipsis;
 }
 
 .event-description a {

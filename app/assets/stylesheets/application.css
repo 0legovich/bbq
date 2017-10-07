@@ -64,3 +64,11 @@
 .devise-error-messages h2 {
   font-size: 14px;
 }
+
+.nav-link {
+  color: #666666;
+}
+
+.nav-link:hover {
+  color: #000000;
+}
