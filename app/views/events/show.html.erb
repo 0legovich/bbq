@@ -1,11 +1,11 @@
 <div class="event">
   <div class="event-info row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <%= content_tag 'div', '',
                       class: 'event-background',
                       style: "background-image: url(#{event_photo(@event)})" %>
       <div class="event-info-inner event-header row">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <div class="event-description buffer-top">
             <h1><%= @event.title %></h1>
             <h3><%= l(@event.datetime, format: :long) %></h3>
@@ -24,10 +24,10 @@
               </div>
           <% end %>
         </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div id="map" data-address="<%= @event.adress %>" class="event-map event-header">
+        <div class="col-md-6 buffer-both">
+          <div id="map" data-address="<%= @event.adress %>" class="event-map">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -38,6 +38,7 @@
       <div class="event-photos">
 
         <div class="event-photos-gallery">
+          <h3 class="h3">Галлерея события</h3>
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
 
@@ -47,7 +48,7 @@
       </div>
 
       <div class="event-comments buffer-top">
-
+        <h3 class="h3">Комментарии к событию</h3>
         <%= render partial: 'comments/form', locals: {comment: @new_comment || @event.comments.build} %>
 
         <div class="buffer-top">

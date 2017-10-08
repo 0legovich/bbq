@@ -42,6 +42,15 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
-.event-header {
-  height: 300px;
+.event-map {
+  height: 280px;
+}
+
+.event-photo {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.event-photo-title {
+  font-size: 14px;
 }

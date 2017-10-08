@@ -1,4 +1,14 @@
 <div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
-  Добавил <%= render partial: 'users/user', object: photo.user %>
+  <% @img_title = capture do %>
+      <div class="event-photo-title">
+        Добавил <%= render partial: 'users/user', object: photo.user %>
+      </div>
+  <% end %>
+  <%= link_to(image_tag(photo.photo.thumb.url, class: "img-fluid"),
+              photo.photo.url, {
+                  'data-title': @img_title,
+                  'data-gallery': "event-gallery",
+                  'data-toggle': "lightbox"
+              })
+  %>
 </div>
