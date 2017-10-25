@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def event_photo(event)
-    photos = event.photos.persisted
+    photos = event.photos.select(&:persisted?)
 
     if photos.any?
       photos.sample.photo.url
@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def event_thumb(event)
-    photos = event.photos.persisted
+    photos = event.photos.select(&:persisted?)
 
     if photos.any?
       photos.sample.photo.thumb.url

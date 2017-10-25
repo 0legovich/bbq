@@ -46,6 +46,7 @@ class EventsController < ApplicationController
   end
 
   private
+
   def password_guard!
     return true if @event.pincode.blank?
     return true if signed_in? && @event.user == current_user

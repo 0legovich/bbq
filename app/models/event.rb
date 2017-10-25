@@ -6,10 +6,10 @@ class Event < ActiveRecord::Base
   has_many :photos
 
   validates :title, :user, :adress, :datetime, presence: true
-  validates :title, length: { maximum: 255 }
+  validates :title, length: {maximum: 255}
 
   def visitors
-    (subscribers = [user]).uniq
+    (subscribers + [user]).uniq
   end
 
   def pincode_valid?(pin2check)

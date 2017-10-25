@@ -6,5 +6,5 @@ class Photo < ActiveRecord::Base
 
   mount_uploader :photo, PhotoUploader
 
-  scope :persisted, -> {where 'id IS NOT NULL'}
+  scope :persisted, -> { where 'id IS NOT NULL' }
 end

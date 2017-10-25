@@ -29,6 +29,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def notify_subscribers(event, comment)
     event_emails = get_emails(event, comment)
 

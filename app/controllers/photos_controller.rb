@@ -31,6 +31,7 @@ class PhotosController < ApplicationController
   end
 
   private
+
   def notify_subscribers(event, photo)
     event_emails = get_emails(event, photo)
 
